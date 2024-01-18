@@ -1,0 +1,28 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= name %></p>
+
+
+
+ <!-- Upload section-->
+<!-- File Upload Form -->
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="file">Select a file:</label>
+    <input type="file" name="file" id="file" accept=".pdf, .doc, .docx, .txt">
+    <button type="submit">Upload File</button>
+</form>
+
+<!-- List of Uploaded Files -->
+<h3>Uploaded Files</h3>
+<ul id="fileList">
+    <!-- Display the list of files here -->
+</ul>
+   
+    <label for="file">Please fill Details:</label>
+<form action="/download-code" method="post" >
+    <label for="downloadCode">Enter 9 Digit Unique-Code:</label>
+    <input type="text" id="downloadCode" name="filename" required>
+    <button type="submit">Download File</button>
+  </form>
+ 
+<script src="/dashboard.js"></script>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
